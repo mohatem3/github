@@ -61,13 +61,13 @@ def replay():
 print('Welcome to the game!')
 
 while True:
-    # Reset the board
+
     theBoard = [' '] * 10
     player1_marker, player2_marker = player_input()
     turn = choose_first()
     print(turn + ' will go first.')
     
-    play_game = input('Are you ready to play? Enter Yes or No. ').lower
+    play_game = input('Are you ready to play? Enter Yes or No. ')
     
     if play_game == 'y':
         game_on = True
@@ -113,3 +113,4 @@ while True:
 
     if not replay():
         break
+
