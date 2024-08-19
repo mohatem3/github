@@ -58,7 +58,7 @@ def player_choice(board):
 def replay():
     return input('Do you want to play again? Enter Yes or No: ').lower().startswith('y')
 
-print('Welcome to Tic Tac Toe!')
+print('Welcome to the game!')
 
 while True:
     # Reset the board
@@ -67,16 +67,15 @@ while True:
     turn = choose_first()
     print(turn + ' will go first.')
     
-    play_game = input('Are you ready to play? Enter Yes or No. ')
+    play_game = input('Are you ready to play? Enter Yes or No. ').lower
     
-    if play_game.lower()[0] == 'y':
+    if play_game == 'y':
         game_on = True
     else:
         game_on = False
 
     while game_on:
         if turn == 'Player 1':
-            # Player 1's turn
             
             display_board(theBoard)
             position = player_choice(theBoard)
@@ -95,7 +94,6 @@ while True:
                     turn = 'Player 2'
 
         else:
-            # Player 2's turn
             
             display_board(theBoard)
             position = player_choice(theBoard)
